@@ -19,7 +19,7 @@ export default function Footer({ siteSettings: blok }: { siteSettings?: any }) {
           {/* Brand Info */}
           <div className={styles.brandInfo}>
             <div className={styles.logoContainer}>
-              <div className={styles.logoBadge}>VH</div>
+              <img src="/project-logo.webp" alt="Vantara Heritage Logo" style={{ height: "45px", width: "auto", borderRadius: "4px" }} />
               <span className={styles.logoText}>
                 {logoText}
                 <span className={styles.logoSubtext}>Garhmukteshwar</span>

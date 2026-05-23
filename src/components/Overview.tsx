@@ -159,7 +159,7 @@ export default function Overview({ blok }: { blok?: any }) {
                     loop
                     className={styles.videoPlayer}
                   >
-                    <source src="/vantara-heritage-actual-view.mp4" type="video/mp4" />
+                    <source src="/projectvideo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>

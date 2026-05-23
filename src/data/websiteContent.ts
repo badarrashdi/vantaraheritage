@@ -124,8 +124,8 @@ export interface WebsiteContent {
 export const websiteContent: WebsiteContent = {
   siteSettings: {
     logoText: "Vantara Heritage",
-    logoImage: "/images/project-logo.png",
-    logoImageGrey: "/images/project-logo-grey.png",
+    logoImage: "/project-logo.webp",
+    logoImageGrey: "/project-logo.webp",
     phoneNumber: "+919873378592",
     phoneFormatted: "+91-9873378592",
     whatsappMessage: "Hello, Looking for Vantara Heritage Garh Mukteshwar. Get in touch with me",
@@ -318,12 +318,12 @@ export const websiteContent: WebsiteContent = {
     newsTitle: "Township Vision 2031",
     newsSubtitle: "गढ़मुक्तेश्वर तीर्थनगरी के विकास के लिए महायोजना 2031",
     newsItems: [
-      { id: "news-1", src: "/images/news/garhmukteshwar-development-plans-news1.jpg", alt: "Garhmukteshwar Development Plan 1", title: "Maha Yojana 2031 - Phase 1" },
-      { id: "news-2", src: "/images/news/garhmukteshwar-development-plans-news2.jpg", alt: "Garhmukteshwar Development Plan 2", title: "Ganga Development Masterplan" },
-      { id: "news-3", src: "/images/news/garhmukteshwar-development-plans-news3.jpg", alt: "Garhmukteshwar Development Plan 3", title: "Expressway Connectivity Impact" },
-      { id: "news-4", src: "/images/news/garhmukteshwar-development-plans-news4.jpg", alt: "Garhmukteshwar Development Plan 4", title: "Brijghat Tourism Expansion" },
-      { id: "news-5", src: "/images/news/garhmukteshwar-development-plans-news5.jpg", alt: "Garhmukteshwar Development Plan 5", title: "Residential Infrastructure Approval" },
-      { id: "news-6", src: "/images/news/garhmukteshwar-development-plans-news6.jpg", alt: "Garhmukteshwar Development Plan 6", title: "Gated Townships Green Zones" }
+      { id: "news-1", src: "/images/news-expressway.jpg", alt: "Ganga Expressway Future Plan", title: "गंगा एक्सप्रेसवे से बदलेगा क्षेत्र का भविष्य" },
+      { id: "news-2", src: "/images/news-plaza.jpg", alt: "Plaza House Development Plan", title: "12 एकड़ जमीन पर बनेगा प्लाजा हाउस" },
+      { id: "news-3", src: "/images/location-map.jpg", alt: "Vantara Heritage Location Map", title: "Vantara Heritage Location Map" },
+      { id: "news-4", src: "/images/news-expressway.jpg", alt: "Garhmukteshwar Development Plan 4", title: "Brijghat Tourism Expansion" },
+      { id: "news-5", src: "/images/news-plaza.jpg", alt: "Garhmukteshwar Development Plan 5", title: "Residential Infrastructure Approval" },
+      { id: "news-6", src: "/images/location-map.jpg", alt: "Garhmukteshwar Development Plan 6", title: "Gated Townships Green Zones" }
     ]
   },
   contactSection: {

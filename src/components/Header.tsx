@@ -46,7 +46,7 @@ export default function Header({ siteSettings: blok }: { siteSettings?: any }) {
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo Section */}
           <a href="#home" className={styles.logoContainer} onClick={closeMobileMenu}>
-            <div className={styles.logoBadge}>VH</div>
+            <img src="/project-logo.webp" alt="Vantara Heritage Logo" style={{ height: "42px", width: "auto", borderRadius: "4px" }} />
             <span className={styles.logoText}>
               {logoText}
               <span className={styles.logoSubtext}>Garhmukteshwar</span>
@@ -100,7 +100,7 @@ export default function Header({ siteSettings: blok }: { siteSettings?: any }) {
       {/* Mobile Navigation Drawer */}
       <div className={`${styles.mobileDrawer} ${mobileMenuOpen ? styles.drawerOpen : ""}`}>
         <div className={styles.drawerHeader}>
-          <div className={styles.logoBadge}>VH</div>
+          <img src="/project-logo.webp" alt="Vantara Heritage Logo" style={{ height: "40px", width: "auto", borderRadius: "4px" }} />
           <span className={styles.drawerLogoText}>{logoText}</span>
           <button className={styles.closeBtn} onClick={toggleMobileMenu} aria-label="Close menu">
             &times;

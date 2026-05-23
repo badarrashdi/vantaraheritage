@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -57,21 +56,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-
-        {/* Optimized Tawk.to Live Chat Script Integration */}
-        <Script id="tawk-chat" strategy="afterInteractive">
-          {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-              s1.async=true;
-              s1.src='https://embed.tawk.to/63072b9254f06e12d890a706/1gba04d9t';
-              s1.charset='UTF-8';
-              s1.setAttribute('crossorigin','*');
-              s0.parentNode.insertBefore(s1,s0);
-            })();
-          `}
-        </Script>
       </body>
     </html>
   );
