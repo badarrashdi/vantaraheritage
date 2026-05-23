@@ -1,0 +1,94 @@
+.highlightsSection {
+  background-color: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 3vw, 24px);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px clamp(20px, 3vw, 30px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.counterBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(18, 48, 38, 0.04);
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  transition: all var(--transition-smooth);
+}
+
+.counterNum {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  transition: all var(--transition-fast);
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.highlightText {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--primary-dark);
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-gold);
+}
+
+.card:hover .counterBox {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-color: var(--accent);
+  box-shadow: 0 4px 10px rgba(212,163,89,0.3);
+}
+
+.card:hover .counterNum {
+  color: var(--primary-dark);
+}
+
+/* Gold background overlay glow */
+.counterGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.card:hover .counterGlow {
+  opacity: 1;
+}

@@ -1,0 +1,169 @@
+.priceSection {
+  background-color: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 4vw, 30px);
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Gold Typography Badge */
+.typologyBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: var(--primary-dark);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(212, 163, 89, 0.15);
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 10px;
+}
+
+.plotSize {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1.1;
+}
+
+.plotType {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-dark);
+  display: block;
+  margin-top: 6px;
+}
+
+/* Cost Area */
+.priceContainer {
+  width: 100%;
+  background-color: var(--bg);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-smooth);
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.priceValue {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  line-height: 1.2;
+}
+
+.priceClarify {
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Parameter Grid List */
+.detailsList {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.detailsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.detailsKey {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.detailsVal {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.enquireBtn {
+  width: 100%;
+  padding: 14px;
+}
+
+/* Interactive card hover */
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-gold);
+}
+
+.card:hover .priceContainer {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.card:hover .priceValue {
+  color: #ffffff;
+}
+
+.card:hover .priceLabel {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card:hover .priceClarify {
+  color: var(--accent);
+}

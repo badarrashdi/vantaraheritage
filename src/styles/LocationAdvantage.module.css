@@ -1,0 +1,159 @@
+.locationSection {
+  background-color: var(--bg-card);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-top: -12px;
+  margin-bottom: 30px;
+}
+
+/* Linear Gold Timeline Nodes CSS */
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: linear-gradient(to bottom, var(--accent) 0%, rgba(212, 163, 89, 0.1) 100%);
+  z-index: 1;
+}
+
+.timelineNode {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.nodeMarker {
+  position: absolute;
+  left: -50px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(212,163,89,0.3);
+  z-index: 3;
+}
+
+.nodeNum {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.nodeContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all var(--transition-smooth);
+}
+
+.timelineNode:hover .nodeContent {
+  transform: translateX(6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-card);
+}
+
+.nodePlace {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.distanceBadge {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background-color: rgba(212, 163, 89, 0.08);
+  border: 1.5px solid rgba(212, 163, 89, 0.25);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Right Column: Google Maps Iframe Frame CSS */
+.mapCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.mapHeader {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--accent);
+}
+
+.mapIcon {
+  color: var(--accent);
+}
+
+.iframeViewport {
+  width: 100%;
+  height: clamp(350px, 50vh, 450px);
+  background-color: var(--bg);
+}
+
+.mapIframe {
+  display: block;
+}

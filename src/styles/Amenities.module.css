@@ -1,0 +1,102 @@
+.amenitiesSection {
+  background-color: var(--bg-card); /* Pure white background section to contrast with creamy overview */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 3vw, 24px);
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--transition-smooth);
+  z-index: 2;
+}
+
+.iconContainer {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(18, 48, 38, 0.05); /* Low opacity Emerald */
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-smooth);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  transition: all var(--transition-fast);
+}
+
+.cardText {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-gold);
+  background-color: var(--bg-card);
+}
+
+.card:hover .iconContainer {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 4px 12px rgba(212, 163, 89, 0.3);
+}
+
+.card:hover .cardTitle {
+  color: var(--accent-dark);
+}
+
+/* Gold background card glow */
+.cardGlow {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 50%;
+  transition: all var(--transition-smooth);
+  pointer-events: none;
+}
+
+.card:hover .cardGlow {
+  width: 140px;
+  height: 140px;
+  bottom: -60px;
+  right: -60px;
+}

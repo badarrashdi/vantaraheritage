@@ -1,0 +1,214 @@
+.contactSection {
+  background-color: var(--bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Structured info Card listing */
+.infoCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(212, 163, 89, 0.08);
+  border: 1.5px solid rgba(212, 163, 89, 0.25);
+  color: var(--accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.infoText {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.infoLink {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  transition: var(--transition-fast);
+}
+
+.infoLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Right Column Form styling */
+.formCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+  .formCol {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.formCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: clamp(30px, 4vw, 40px);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 440px;
+}
+
+.formHeading {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.formHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.actualForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.inputField, .inputArea {
+  width: 100%;
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.inputArea {
+  resize: none;
+}
+
+.inputField::placeholder, .inputArea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.inputField:focus, .inputArea:focus {
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.errorText {
+  font-size: 0.8rem;
+  color: #ff3333;
+}
+
+/* Success Card */
+.successState {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successState h3 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.successState p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}

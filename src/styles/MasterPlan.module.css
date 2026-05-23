@@ -1,0 +1,232 @@
+.masterPlanSection {
+  background-color: var(--bg-card);
+}
+
+.viewerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: clamp(16px, 3vw, 24px);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Control Panel Console */
+.console {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  z-index: 10;
+}
+
+.consoleBtn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-dark);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.consoleBtn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.expandBtn {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary-dark);
+}
+
+.expandBtn:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #ffffff;
+}
+
+/* Viewport structure */
+.viewport {
+  width: 100%;
+  height: clamp(350px, 60vh, 500px);
+  border-radius: 6px;
+  background-color: var(--primary-dark);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layoutMap {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+/* Map Key indicators */
+.mapMetrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(15px, 3vw, 30px);
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.greenDot {
+  background-color: #2e7d32;
+  box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+
+.blueDot {
+  background-color: #1565c0;
+  box-shadow: 0 0 6px rgba(21, 101, 192, 0.4);
+}
+
+.goldDot {
+  background-color: var(--accent-dark);
+  box-shadow: 0 0 6px rgba(212, 163, 89, 0.4);
+}
+
+/* Fullscreen Lightbox CSS */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  z-index: 2100;
+  transition: var(--transition-fast);
+  line-height: 1;
+}
+
+.lightboxClose:hover {
+  color: var(--accent);
+}
+
+/* Floating overlay console on Lightbox */
+.lightboxConsole {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background-color: rgba(18, 48, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  z-index: 2100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightboxConsoleBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all var(--transition-fast);
+}
+
+.lightboxConsoleBtn:hover {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+}
+
+.downloadBtn {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+}
+
+.downloadBtn:hover {
+  background-color: var(--accent-light);
+  color: var(--primary-dark);
+}
+
+/* Lightbox panning viewport */
+.lightboxViewport {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.lightboxImageContainer {
+  transition: transform var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}

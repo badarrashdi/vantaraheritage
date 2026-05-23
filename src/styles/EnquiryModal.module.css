@@ -1,0 +1,208 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18, 48, 38, 0.55); /* Elegant Dark Forest overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.4s var(--transition-smooth) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-glass), 0 30px 60px rgba(18, 48, 38, 0.25);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  animation: modalZoomIn 0.5s var(--transition-slow) forwards;
+}
+
+@keyframes modalZoomIn {
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: var(--transition-fast);
+}
+
+.closeBtn:hover {
+  color: var(--accent-dark);
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Logo monogram matching header */
+.logoBadge {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 8px rgba(212,163,89,0.2);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.priceCallout {
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 20px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.priceLabel {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.priceValue {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Lead form controls */
+.actualForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.inputField, .inputArea {
+  width: 100%;
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.inputArea {
+  resize: none;
+}
+
+.inputField::placeholder, .inputArea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.inputField:focus, .inputArea:focus {
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  font-weight: 700;
+}
+
+.errorText {
+  font-size: 0.75rem;
+  color: #ff3333;
+}
+
+/* Booking success indicator */
+.successState {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.successIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successState h3 {
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.successState p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

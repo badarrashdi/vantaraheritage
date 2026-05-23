@@ -1,0 +1,195 @@
+.footer {
+  background-color: var(--primary-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: clamp(60px, 8vw, 80px);
+  padding-bottom: clamp(30px, 4vw, 40px);
+  border-top: 2px solid var(--accent);
+  font-family: var(--font-sans);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: clamp(30px, 4vw, 50px);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.brandInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Monogram Logo */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoBadge {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(212, 163, 89, 0.15);
+}
+
+.logoText {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoSubtext {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.brandDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.groupTitle {
+  font-family: var(--font-serif);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.groupTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 1.5px;
+  background-color: var(--accent);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  transition: var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.highlightLink {
+  color: var(--accent);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.highlightLink:hover {
+  color: #ffffff;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 30px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 15px);
+}
+
+.legalLink {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legalLink:hover {
+  color: var(--accent);
+}
+
+.legalSeparator {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.2);
+}
