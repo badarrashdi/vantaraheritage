@@ -167,29 +167,8 @@ export default function Overview({ blok }: { blok?: any }) {
 
               {/* Photo Collage Stack */}
               <div className={styles.photoGrid}>
-                <div className={styles.photoCard}>
-                  <img
-                    src="/images/vantara-heritage1.jpeg"
-                    alt="Vantara Heritage Land Setup"
-                    className={styles.collageImage}
-                    onError={(e) => {
-                      // Fallback placeholder gradient if asset doesn't exist locally yet
-                      e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23123026'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='20' fill='%23d4a359' text-anchor='middle'%3EVantara Heritage%3C/text%3E%3C/svg%3E";
-                    }}
-                  />
-                  <span className={styles.photoCaption}>Gated Township entrance</span>
-                </div>
-                <div className={styles.photoCard}>
-                  <img
-                    src="/images/vantara-heritage2.jpeg"
-                    alt="Vantara Heritage Development"
-                    className={styles.collageImage}
-                    onError={(e) => {
-                      e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23123026'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='20' fill='%23d4a359' text-anchor='middle'%3EVantara Plots%3C/text%3E%3C/svg%3E";
-                    }}
-                  />
-                  <span className={styles.photoCaption}>Villa plot layout view</span>
-                </div>
+
+    
               </div>
             </div>
           </div>
