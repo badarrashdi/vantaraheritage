@@ -134,16 +134,14 @@ export const websiteContent: WebsiteContent = {
     copyright: "© 2026 Vantara Heritage. All Rights Reserved."
   },
   navigation: [
-    { label: "Home", hash: "#home" },
-    { label: "Overview", hash: "#overview" },
-    { label: "Price List", hash: "#price-list" },
+    { label: "Price", hash: "#price-list" },
     { label: "Highlights", hash: "#highlights" },
     { label: "Amenities", hash: "#amenities" },
     { label: "Master Plan", hash: "#master-plan" },
-    { label: "Download Brochure", hash: "#download-brochure" },
+    { label: "Brochure", hash: "#download-brochure" },
     { label: "Location", hash: "#location-advantage" },
     { label: "Gallery", hash: "#gallery" },
-    { label: "Contact Us", hash: "#contact-us" }
+    { label: "Contact", hash: "#contact-us" }
   ],
   hero: {
     title: "Vantara Heritage",
