@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     // Send email via Resend
     const { data, error } = await resend.emails.send({
       from: "Vantara Heritage <onboarding@resend.dev>",
-      to: ["badarrashdi@gmail.com"],
+      to: ["rashdibadar@gmail.com"],
       subject: `New Lead: ${name} - ${formType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
